@@ -1,7 +1,7 @@
 === Run information ===
 
 Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
-Relation:     opinion-weka.filters.unsupervised.attribute.StringToWordVector-R1-W100-prune-rate-1.0-C-N1-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M2-tokenizerweka.core.tokenizers.AlphabeticTokenizer-weka.filters.unsupervised.attribute.StringToWordVector-Rfirst-last-W10000-prune-rate-1.0-C-N1-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M2-tokenizerweka.core.tokenizers.AlphabeticTokenizer-weka.filters.unsupervised.attribute.StringToWordVector-Rfirst-last-W10000-prune-rate-1.0-C-N1-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M2-tokenizerweka.core.tokenizers.AlphabeticTokenizer-weka.filters.unsupervised.attribute.StringToWordVector-Rfirst-last-W10000-prune-rate-1.0-C-N1-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M2-tokenizerweka.core.tokenizers.AlphabeticTokenizer-weka.filters.unsupervised.attribute.StringToWordVector-Rfirst-last-W1000-prune-rate-1.0-N0-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M1-tokenizerweka.core.tokenizers.WordTokenizer -delimiters " \r\n\t.,;:\'\"()?!"-weka.filters.unsupervised.attribute.StringToWordVector-Rfirst-last-W1000-prune-rate-1.0-N0-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M1-tokenizerweka.core.tokenizers.WordTokenizer -delimiters " \r\n\t.,;:\'\"()?!"-weka.filters.unsupervised.attribute.StringToWordVector-Rfirst-last-W1000-prune-rate-1.0-N0-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M1-tokenizerweka.core.tokenizers.WordTokenizer -delimiters " \r\n\t.,;:\'\"()?!"-weka.filters.unsupervised.attribute.StringToWordVector-Rfirst-last-W1000-prune-rate-1.0-N0-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M1-tokenizerweka.core.tokenizers.AlphabeticTokenizer
+Relation:     opinion-weka.filters.unsupervised.attribute.StringToWordVector-R1-W100-prune-rate-1.0-C-N1-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M2-tokenizerweka.core.tokenizers.AlphabeticTokenizer-weka.filters.unsupervised.attribute.StringToWordVector-Rfirst-last-W10000-prune-rate-1.0-C-N1-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M2-tokenizerweka.core.tokenizers.AlphabeticTokenizer-weka.filters.unsupervised.attribute.StringToWordVector-Rfirst-last-W10000-prune-rate-1.0-C-N1-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M2-tokenizerweka.core.tokenizers.AlphabeticTokenizer-weka.filters.unsupervised.attribute.StringToWordVector-Rfirst-last-W10000-prune-rate-1.0-C-N1-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M2-tokenizerweka.core.tokenizers.AlphabeticTokenizer-weka.filters.unsupervised.attribute.StringToWordVector-Rfirst-last-W1000-prune-rate-1.0-N0-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M1-tokenizerweka.core.tokenizers.WordTokenizer -delimiters " \r\n\t.,;:\'\"()?!"-weka.filters.unsupervised.attribute.StringToWordVector-Rfirst-last-W1000-prune-rate-1.0-N0-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M1-tokenizerweka.core.tokenizers.WordTokenizer -delimiters " \r\n\t.,;:\'\"()?!"-weka.filters.unsupervised.attribute.StringToWordVector-Rfirst-last-W1000-prune-rate-1.0-N0-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M1-tokenizerweka.core.tokenizers.WordTokenizer -delimiters " \r\n\t.,;:\'\"()?!"-weka.filters.unsupervised.attribute.StringToWordVector-Rfirst-last-W1000-prune-rate-1.0-N0-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M1-tokenizerweka.core.tokenizers.AlphabeticTokenizer-weka.filters.unsupervised.attribute.StringToWordVector-Rfirst-last-W1000-prune-rate-1.0-C-T-I-N1-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M5-tokenizerweka.core.tokenizers.NGramTokenizer -max 3 -min 1 -delimiters " \r\n\t.,;:\'\"()?!"
 Instances:    7230
 Attributes:   154
               [list of attributes omitted]
@@ -15,13 +15,37 @@ using 1 nearest neighbour(s) for classification
 
 Time taken to build model: 0 seconds
 
-=== Cross-validation ===
+=== Stratified cross-validation ===
 === Summary ===
 
-Correlation coefficient                  0.0387
-Mean absolute error                      0.0424
-Root mean squared error                  0.2157
-Relative absolute error                124.1922 %
-Root relative squared error            158.6101 %
+Correctly Classified Instances        2705               37.4136 %
+Incorrectly Classified Instances      4525               62.5864 %
+Kappa statistic                          0.1026
+K&B Relative Info Score             114318.49   %
+K&B Information Score                 2116.8453 bits      0.2928 bits/instance
+Class complexity | order 0           13386.9499 bits      1.8516 bits/instance
+Class complexity | scheme            56678.9779 bits      7.8394 bits/instance
+Complexity improvement     (Sf)     -43292.028  bits     -5.9878 bits/instance
+Mean absolute error                      0.3165
+Root mean squared error                  0.5567
+Relative absolute error                 91.3989 %
+Root relative squared error            133.8001 %
 Total Number of Instances             7230
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.500    0.383    0.54654      0.500    0.510      0.117    0.560     0.490     positive
+                 0.242    0.133    0.285      0.242    0.262      0.117    0.559     0.209     negative
+                 0.275    0.222    0.252      0.275    0.263      0.051    0.528     0.226     neutral
+                 0.294    0.157    0.253      0.294    0.272      0.129    0.576     0.194     objective
+Weighted Avg.    0.374    0.269    0.380      0.374    0.376      0.105    0.555     0.338
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 1642  461  694  487 |    a = positive
+  537  313  274  169 |    b = negative
+  603  214  425  305 |    c = neutral
+  373  112  296  325 |    d = objective
 
