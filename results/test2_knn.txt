@@ -18,8 +18,8 @@ Time taken to build model: 0 seconds
 === Stratified cross-validation ===
 === Summary ===
 
-Correctly Classified Instances        2705               37.4136 %
-Incorrectly Classified Instances      4525               62.5864 %
+Correctly Classified Instances        2903               40.1522 %
+Incorrectly Classified Instances      4327               59.8478 %
 Kappa statistic                          0.1026
 K&B Relative Info Score             114318.49   %
 K&B Information Score                 2116.8453 bits      0.2928 bits/instance
