@@ -1,0 +1,46 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     opinion-weka.filters.unsupervised.attribute.StringToWordVector-R1-W1000-prune-rate-1.0-T-I-N0-stemmerweka.core.stemmers.LovinsStemmer-stopwords-handlerweka.core.stopwords.MultiStopwords-M1-tokenizerweka.core.tokenizers.WordTokenizer -delimiters " \r\n\t.,;:\'\"()?!"
+Instances:    7230
+Attributes:   2135
+              [list of attributes omitted]
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        2982               41.2448 %
+Incorrectly Classified Instances      4248               58.7552 %
+Kappa statistic                          0.0815
+Mean absolute error                      0.3074
+Root mean squared error                  0.5166
+Relative absolute error                 88.7853 %
+Root relative squared error            124.1514 %
+Total Number of Instances             7230
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.696    0.594    0.494      0.696    0.578      0.106    0.575     0.508     positive
+                 0.107    0.060    0.280      0.107    0.155      0.071    0.524     0.201     negative
+                 0.232    0.203    0.238      0.232    0.235      0.030    0.524     0.224     neutral
+                 0.180    0.065    0.333      0.180    0.234      0.150    0.586     0.213     objective
+Weighted Avg.    0.412    0.334    0.376      0.412    0.376      0.090    0.557     0.348
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 2286  191  636  171 |    a = positive
+  795  138  275   85 |    b = negative
+  943  102  359  143 |    c = neutral
+  604   62  241  199 |    d = objective
+
