@@ -60,7 +60,8 @@ def main():
         text_string = replace_emojis(text_string)
 
         # write result to file
-        final_string = "'" + ' '.join(words[3:]) + "'," + judgement + "," + str(num_positive) + "," + str(num_negative)
+        final_string = text_string + "," + judgement + "," + str(num_positive) + "," + str(num_negative)
+
         # print(final_string)
         print(final_string, file=open(output_file_name, "a"))
 
@@ -87,7 +88,8 @@ def replace_emojis(text_string):
     # text_string = text_string.replace(😎, " B) ")
 
     u = ''.join(utf16(c) for c in text_string)
-    return u
+
+    return repr(u)
 
 def pairup(b):
     return [(b[i] << 8 | b[i+1]) for i in range(0, len(b), 2)]
