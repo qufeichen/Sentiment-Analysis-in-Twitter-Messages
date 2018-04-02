@@ -7,7 +7,7 @@ import re
 
 data_path = "/Users/qufeichen/Documents/Repos/Sentiment-Analysis-in-Twitter-Messages/project_files/semeval_twitter_data.txt"
 subjectivity_clues_path = "/Users/qufeichen/Documents/Repos/Sentiment-Analysis-in-Twitter-Messages/project_files/subjectivity_clues_hltemnlp05/subjclueslen1-HLTEMNLP05.txt"
-output_file_name = "/Users/qufeichen/Documents/Repos/Sentiment-Analysis-in-Twitter-Messages/src/subj_data.arff"
+output_file_name = "/Users/qufeichen/Documents/Repos/Sentiment-Analysis-in-Twitter-Messages/src/subj_data2.arff"
 
 def main():
     # read data and subjectivity from file
@@ -18,8 +18,7 @@ def main():
     print("@relation opinion", file=open(output_file_name, "a"))
     print("@attribute sentence string", file=open(output_file_name, "a"))
     print("@attribute category {positive,negative,neutral,objective}", file=open(output_file_name, "a"))
-    print("@attribute num_positive numeric", file=open(output_file_name, "a"))
-    print("@attribute num_negative numeric", file=open(output_file_name, "a"))
+    print("@attribute positive_negative_score numeric", file=open(output_file_name, "a"))
     print("@data", file=open(output_file_name, "a"))
     print("", file=open(output_file_name, "a"))
 
@@ -56,11 +55,17 @@ def main():
         # remove quotes around judgement
         judgement = judgement.replace('"','')
 
+        # join words into string
         text_string = ' '.join(words[3:])
+        # parse emojis into unicode
         text_string = replace_emojis(text_string)
+        # remove backslash
+        text_string = text_string.replace("\\", "")
+        # remove rogue apostrophes
+        text_string = text_string.replace("'", "")
 
         # write result to file
-        final_string = text_string + "," + judgement + "," + str(num_positive) + "," + str(num_negative)
+        final_string = "'" + text_string + "'," + judgement + "," + str(score)
 
         # print(final_string)
         print(final_string, file=open(output_file_name, "a"))
